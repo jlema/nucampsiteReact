@@ -46,7 +46,7 @@ h2 {
 
 .page-enter {
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translateX(-12.5%);
 }
 
 .page-enter-active {

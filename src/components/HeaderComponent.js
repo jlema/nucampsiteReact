@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import { Transform } from 'react-animation-components'
 
 class Header extends Component {
 
@@ -38,6 +39,7 @@ class Header extends Component {
     render() {
         return (
             <React.Fragment>
+
                 <Jumbotron fluid>
                     <div className="container">
                         <div className="row">
@@ -48,9 +50,12 @@ class Header extends Component {
                         </div>
                     </div>
                 </Jumbotron>
+
                 <Navbar dark sticky="top" expand="md">
                     <div className="container">
-                        <NavbarBrand className="mr-auto" href="/"><img src="/assets/images/logo.png" height="30" width="30" alt="NuCamp Logo" /></NavbarBrand>
+                        <Transform enterTransform="rotate(720deg)" in>
+                            <NavbarBrand className="mr-auto" href="/"><img src="/assets/images/logo.png" height="30" width="30" alt="NuCamp Logo" /></NavbarBrand>
+                        </Transform>
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
